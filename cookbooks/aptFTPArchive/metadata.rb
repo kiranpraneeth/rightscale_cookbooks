@@ -14,25 +14,25 @@ attribute "aptFTPArchive/suite",
   :description => "A space-separated list of Suites",
   :type => "string",
   :default => "beta prod",
-  :required => "required"
+  :required => "recommended"
 
 attribute "aptFTPArchive/codename",
   :display_name => "APT FTP Archive codename",
   :description => "Codename",
   :type => "string",
   :default => "prod",
-  :required => "required"
+  :required => "recommended"
 
 attribute "aptFTPArchive/architectures",
   :display_name => "APT FTP Archive Architectures",
   :description => "A space-separated list of Architectures",
   :type => "string",
   :default => "amd64 i386 i686",
-  :required => "required"
+  :required => "recommended"
 
 attribute "aptFTPArchive/components",
   :display_name => "APT FTP Archive Components",
   :description => "A space-separated list oC components",
   :type => "string",
   :default => "main ops 3ppours 3pp",
-  :required => "required"
+  :required => "recommended"
