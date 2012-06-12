@@ -62,6 +62,19 @@ template "/opt/mkhoj/ops/conf/inmobi-aptftp.conf" do
   mode 0644
 end
 
+template "/etc/apache2/conf.d/apt-apache.conf" do
+  source "apt-apache.conf.erb"
+  owner "root"
+  group "root"
+  mode 0644
+end
+
+service "apache2" do
+  action :restart
+end
+
+
+
 case node[:platform]
 when "ubuntu","debian"
   package "inmobi-aptftp-build-repo" do
