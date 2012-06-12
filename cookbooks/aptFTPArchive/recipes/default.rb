@@ -39,3 +39,9 @@ template "/etc/apt/apt-ftparchive.conf" do
   mode 0644
 end
 
+template "/opt/mkhoj/ops/conf/inmobi-aptftp.conf" do
+  source "inmobi-aptftp.conf.erb"
+  owner "root"
+  group "root"
+  mode 0644
+end

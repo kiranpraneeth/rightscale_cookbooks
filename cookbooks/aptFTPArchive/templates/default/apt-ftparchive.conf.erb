@@ -15,7 +15,7 @@ Dir {
 
 <% node[:aptFTPArchive][:suite].split(' ').each do |suit| -%>
   Tree "dists/<%= suit %>" {
-    Sections "<% node[:aptFTPArchive][:components] %>";
+    Sections "<%= node[:aptFTPArchive][:components] %>";
     Architectures "<%= node[:aptFTPArchive][:architectures] %>";
 };
 <% end -%>
