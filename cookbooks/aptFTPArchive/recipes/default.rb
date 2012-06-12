@@ -64,7 +64,8 @@ end
 
 case node[:platform]
 when "ubuntu","debian"
-  package "inmobi-aptftp-build-repo=#{node[:aptFTPArchive][:buildrepover]}" do
+  package "inmobi-aptftp-build-repo" do
+    version "#{node[:aptFTPArchive][:buildrepover]}"
     action :install
   end
 end
