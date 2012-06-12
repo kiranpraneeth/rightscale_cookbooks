@@ -36,3 +36,10 @@ attribute "aptFTPArchive/components",
   :type => "string",
   :default => "main ops 3ppours 3pp",
   :required => "recommended"
+
+attribute "aptFTPArchive/archivedir",
+  :display_name => "APT FTP Archive archivedir",
+  :description => "A space-separated list of archivedir",
+  :type => "string",
+  :default => "/var/drepo/inmobi",
+  :required => "recommended"
