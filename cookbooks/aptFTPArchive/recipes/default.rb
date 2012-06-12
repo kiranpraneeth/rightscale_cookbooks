@@ -47,6 +47,14 @@ template "/etc/apt/apt-ftparchive.conf" do
   mode 0644
 end
 
+directory "/opt/mkhoj/ops/conf" do
+  owner "root"
+  group "root"
+  mode "0755"
+  recursive true
+end
+
+
 template "/opt/mkhoj/ops/conf/inmobi-aptftp.conf" do
   source "inmobi-aptftp.conf.erb"
   owner "root"
