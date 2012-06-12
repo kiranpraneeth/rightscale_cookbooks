@@ -17,8 +17,11 @@ when "ubuntu","debian"
   end
 end
 
-package "apt-utils" do
-  action :install
+case node[:platform]
+when "ubuntu","debian"
+  package "apt-utils" do
+    action :install
+  end
 end
 
 
