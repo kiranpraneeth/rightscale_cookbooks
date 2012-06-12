@@ -1,101 +1,101 @@
 {
-  "recipes": {
-    "aptFTPArchive::default": "Installs APT FTP Archive server."
+  "license": "All rights reserved",
+  "providing": {
   },
+  "maintainer": "InMobi",
+  "name": "aptFTPArchive",
   "attributes": {
-    "aptFTPArchive/codename": {
-      "recipes": [
-
-      ],
-      "choice": [
-
-      ],
-      "description": "Codename",
-      "type": "string",
-      "default": "prod",
-      "required": "recommended",
-      "display_name": "APT FTP Archive codename",
-      "calculated": false
-    },
-    "aptFTPArchive/components": {
-      "recipes": [
-
-      ],
-      "choice": [
-
-      ],
-      "description": "A space-separated list oC components",
-      "type": "string",
-      "default": "main ops 3ppours 3pp",
-      "required": "recommended",
-      "display_name": "APT FTP Archive Components",
-      "calculated": false
-    },
-    "aptFTPArchive/suite": {
-      "recipes": [
-
-      ],
-      "choice": [
-
-      ],
-      "description": "A space-separated list of Suites",
-      "type": "string",
-      "default": "beta prod",
-      "required": "recommended",
-      "display_name": "APT FTP Archive Suites",
-      "calculated": false
-    },
-    "aptFTPArchive/architectures": {
-      "recipes": [
-
-      ],
-      "choice": [
-
-      ],
-      "description": "A space-separated list of Architectures",
-      "type": "string",
-      "default": "amd64 i386 i686",
-      "required": "recommended",
-      "display_name": "APT FTP Archive Architectures",
-      "calculated": false
-    },
     "aptFTPArchive/archivedir": {
-      "recipes": [
-
-      ],
       "choice": [
 
       ],
-      "description": "A space-separated list of archivedir",
-      "type": "string",
+      "calculated": false,
+      "display_name": "APT FTP Archive archivedir",
       "default": "/var/drepo/inmobi",
       "required": "recommended",
-      "display_name": "APT FTP Archive archivedir",
-      "calculated": false
+      "type": "string",
+      "description": "A space-separated list of archivedir",
+      "recipes": [
+
+      ]
+    },
+    "aptFTPArchive/codename": {
+      "choice": [
+
+      ],
+      "calculated": false,
+      "display_name": "APT FTP Archive codename",
+      "default": "prod",
+      "required": "recommended",
+      "type": "string",
+      "description": "Codename",
+      "recipes": [
+
+      ]
+    },
+    "aptFTPArchive/architectures": {
+      "choice": [
+
+      ],
+      "calculated": false,
+      "display_name": "APT FTP Archive Architectures",
+      "default": "amd64 i386 i686",
+      "required": "recommended",
+      "type": "string",
+      "description": "A space-separated list of Architectures",
+      "recipes": [
+
+      ]
+    },
+    "aptFTPArchive/suite": {
+      "choice": [
+
+      ],
+      "calculated": false,
+      "display_name": "APT FTP Archive Suites",
+      "default": "beta prod",
+      "required": "recommended",
+      "type": "string",
+      "description": "A space-separated list of Suites",
+      "recipes": [
+
+      ]
+    },
+    "aptFTPArchive/components": {
+      "choice": [
+
+      ],
+      "calculated": false,
+      "display_name": "APT FTP Archive Components",
+      "default": "main ops 3ppours 3pp",
+      "required": "recommended",
+      "type": "string",
+      "description": "A space-separated list oC components",
+      "recipes": [
+
+      ]
     }
-  },
-  "providing": {
   },
   "conflicting": {
   },
-  "name": "aptFTPArchive",
-  "maintainer": "InMobi",
-  "description": "Installs/Configures aptFTPArchive",
-  "platforms": {
-  },
-  "maintainer_email": "hemant.burman@inmobi.com",
   "version": "0.0.1",
-  "groupings": {
-  },
-  "recommendations": {
-  },
-  "dependencies": {
-    "rightscale": ">= 0.0.0"
-  },
+  "maintainer_email": "hemant.burman@inmobi.com",
   "replacing": {
   },
   "suggestions": {
   },
-  "license": "All rights reserved",
-  "long_description": "Description\n===========\n\nRequirements\n============\n\nAttributes\n==========\n\nUsage\n=====\n\n"
+  "recommendations": {
+  },
+  "platforms": {
+  },
+  "long_description": "Description\n===========\n\nRequirements\n============\n\nAttributes\n==========\n\nUsage\n=====\n\n",
+  "groupings": {
+  },
+  "recipes": {
+    "aptFTPArchive::default": "Installs APT FTP Archive server."
+  },
+  "dependencies": {
+    "rightscale": ">= 0.0.0"
+  },
+  "description": "Installs/Configures aptFTPArchive"
 }
