@@ -49,5 +49,5 @@ attribute "aptFTPArchive/buildrepover",
   :description => "Build Repo Version",
   :type => "string",
   :default => "0.1-1339500317",
-  :required => "required"
+  :required => "recommended"
 
