@@ -24,6 +24,14 @@ when "ubuntu","debian"
   end
 end
 
+case node[:platform]
+when "ubuntu","debian"
+  package "apache2" do
+    action :install
+  end
+end
+
+
 
 template "/etc/apt/apt-custom-release.conf" do
   source "apt-custom-release.conf.erb"
@@ -45,3 +53,11 @@ template "/opt/mkhoj/ops/conf/inmobi-aptftp.conf" do
   group "root"
   mode 0644
 end
+
+case node[:platform]
+when "ubuntu","debian"
+  package "inmobi-aptftp-build-repo=node[:aptFTPArchive][:buildrepover] %>" do
+    action :install
+  end
+end
+

@@ -43,3 +43,11 @@ attribute "aptFTPArchive/archivedir",
   :type => "string",
   :default => "/var/drepo/inmobi",
   :required => "recommended"
+
+attribute "aptFTPArchive/buildrepover",
+  :display_name => "Build Repo Version",
+  :description => "Build Repo Version",
+  :type => "string",
+  :default => "0.1-1339500317",
+  :required => "required"
+
