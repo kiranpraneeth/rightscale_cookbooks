@@ -1,129 +1,129 @@
 {
-  "recommendations": {
-  },
-  "version": "0.0.1",
-  "providing": {
+  "groupings": {
   },
   "conflicting": {
   },
+  "platforms": {
+  },
+  "license": "All rights reserved",
+  "maintainer": "InMobi",
   "suggestions": {
   },
   "recipes": {
     "aptFTPArchive::default": "Installs APT FTP Archive server."
   },
-  "maintainer_email": "hemant.burman@inmobi.com",
-  "license": "All rights reserved",
-  "maintainer": "InMobi",
+  "name": "aptFTPArchive",
   "replacing": {
   },
+  "providing": {
+  },
+  "maintainer_email": "hemant.burman@inmobi.com",
+  "recommendations": {
+  },
+  "description": "Installs/Configures aptFTPArchive",
   "dependencies": {
     "rightscale": ">= 0.0.0"
   },
   "long_description": "Description\n===========\n\nRequirements\n============\n\nAttributes\n==========\n\nUsage\n=====\n\n",
-  "groupings": {
-  },
+  "version": "0.0.1",
   "attributes": {
-    "aptFTPArchive/codename": {
-      "choice": [
-
-      ],
-      "display_name": "APT FTP Archive codename",
-      "calculated": false,
-      "recipes": [
-
-      ],
-      "required": "recommended",
-      "default": "prod",
-      "type": "string",
-      "description": "Codename"
-    },
     "aptFTPArchive/architectures": {
-      "choice": [
-
-      ],
-      "display_name": "APT FTP Archive Architectures",
-      "calculated": false,
-      "recipes": [
-
-      ],
-      "required": "recommended",
       "default": "amd64 i386 i686",
-      "type": "string",
-      "description": "A space-separated list of Architectures"
-    },
-    "aptFTPArchive/archivedir": {
-      "choice": [
-
-      ],
-      "display_name": "APT FTP Archive archivedir",
+      "display_name": "APT FTP Archive Architectures",
+      "required": "recommended",
       "calculated": false,
       "recipes": [
 
       ],
-      "required": "recommended",
-      "default": "/var/drepo/inmobi",
-      "type": "string",
-      "description": "A space-separated list of archivedir"
-    },
-    "aptFTPArchive/suite": {
       "choice": [
 
       ],
-      "display_name": "APT FTP Archive Suites",
+      "description": "A space-separated list of Architectures",
+      "type": "string"
+    },
+    "aptFTPArchive/codename": {
+      "default": "prod",
+      "display_name": "APT FTP Archive codename",
+      "required": "recommended",
       "calculated": false,
       "recipes": [
 
       ],
-      "required": "recommended",
-      "default": "beta prod",
-      "type": "string",
-      "description": "A space-separated list of Suites"
-    },
-    "aptFTPArchive/components": {
       "choice": [
 
       ],
-      "display_name": "APT FTP Archive Components",
-      "calculated": false,
-      "recipes": [
-
-      ],
-      "required": "recommended",
-      "default": "main ops 3ppours 3pp",
-      "type": "string",
-      "description": "A space-separated list oC components"
-    },
-    "aptFTPArchive/aptRootPath": {
-      "choice": [
-
-      ],
-      "display_name": "Apt Apache Root Path",
-      "calculated": false,
-      "recipes": [
-
-      ],
-      "required": "recommended",
-      "default": "/var/drepo",
-      "type": "string",
-      "description": "Apt Apache Root Path"
+      "description": "Codename",
+      "type": "string"
     },
     "aptFTPArchive/buildrepover": {
-      "choice": [
-
-      ],
+      "default": "0.1-1339500317",
       "display_name": "Build Repo Version",
+      "required": "recommended",
       "calculated": false,
       "recipes": [
 
       ],
+      "choice": [
+
+      ],
+      "description": "Build Repo Version",
+      "type": "string"
+    },
+    "aptFTPArchive/suite": {
+      "default": "beta prod",
+      "display_name": "APT FTP Archive Suites",
       "required": "recommended",
-      "default": "0.1-1339500317",
-      "type": "string",
-      "description": "Build Repo Version"
+      "calculated": false,
+      "recipes": [
+
+      ],
+      "choice": [
+
+      ],
+      "description": "A space-separated list of Suites",
+      "type": "string"
+    },
+    "aptFTPArchive/aptRootPath": {
+      "default": "/var/drepo",
+      "display_name": "Apt Apache Root Path",
+      "required": "recommended",
+      "calculated": false,
+      "recipes": [
+
+      ],
+      "choice": [
+
+      ],
+      "description": "Apt Apache Root Path",
+      "type": "string"
+    },
+    "aptFTPArchive/archivedir": {
+      "default": "/var/drepo/inmobi",
+      "display_name": "APT FTP Archive archivedir",
+      "required": "recommended",
+      "calculated": false,
+      "recipes": [
+
+      ],
+      "choice": [
+
+      ],
+      "description": "A space-separated list of archivedir",
+      "type": "string"
+    },
+    "aptFTPArchive/components": {
+      "default": "main ops 3ppours 3pp",
+      "display_name": "APT FTP Archive Components",
+      "required": "recommended",
+      "calculated": false,
+      "recipes": [
+
+      ],
+      "choice": [
+
+      ],
+      "description": "A space-separated list oC components",
+      "type": "string"
     }
-  },
-  "description": "Installs/Configures aptFTPArchive",
-  "platforms": {
-  },
-  "name": "aptFTPArchive"
+  }
 }
