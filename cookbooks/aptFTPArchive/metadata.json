@@ -1,115 +1,115 @@
 {
-  "version": "0.0.1",
+  "groupings": {
+  },
   "suggestions": {
-  },
-  "dependencies": {
-    "rightscale": ">= 0.0.0"
-  },
-  "platforms": {
   },
   "recipes": {
     "aptFTPArchive::default": "Installs APT FTP Archive server."
   },
-  "conflicting": {
-  },
-  "maintainer_email": "hemant.burman@inmobi.com",
-  "long_description": "Description\n===========\n\nRequirements\n============\n\nAttributes\n==========\n\nUsage\n=====\n\n",
-  "recommendations": {
-  },
-  "name": "aptFTPArchive",
-  "groupings": {
-  },
-  "providing": {
-  },
-  "license": "All rights reserved",
-  "description": "Installs/Configures aptFTPArchive",
   "replacing": {
   },
+  "platforms": {
+  },
   "attributes": {
-    "aptFTPArchive/codename": {
-      "recipes": [
-
-      ],
-      "choice": [
-
-      ],
-      "default": "prod",
-      "calculated": false,
-      "display_name": "APT FTP Archive codename",
-      "type": "string",
-      "required": "recommended",
-      "description": "Codename"
-    },
-    "aptFTPArchive/suite": {
-      "recipes": [
-
-      ],
-      "choice": [
-
-      ],
-      "default": "beta prod",
-      "calculated": false,
-      "display_name": "APT FTP Archive Suites",
-      "type": "string",
-      "required": "recommended",
-      "description": "A space-separated list of Suites"
-    },
-    "aptFTPArchive/buildrepover": {
-      "recipes": [
-
-      ],
-      "choice": [
-
-      ],
-      "default": "0.1-1339500317",
-      "calculated": false,
-      "display_name": "Build Repo Version",
-      "type": "string",
-      "required": "recommended",
-      "description": "Build Repo Version"
-    },
     "aptFTPArchive/components": {
-      "recipes": [
+      "type": "string",
+      "choice": [
 
       ],
-      "choice": [
+      "required": "recommended",
+      "recipes": [
 
       ],
       "default": "main ops 3ppours 3pp",
       "calculated": false,
       "display_name": "APT FTP Archive Components",
-      "type": "string",
-      "required": "recommended",
       "description": "A space-separated list oC components"
     },
-    "aptFTPArchive/archivedir": {
-      "recipes": [
-
-      ],
+    "aptFTPArchive/buildrepover": {
+      "type": "string",
       "choice": [
 
       ],
-      "default": "/var/drepo/inmobi",
-      "calculated": false,
-      "display_name": "APT FTP Archive archivedir",
-      "type": "string",
       "required": "recommended",
-      "description": "A space-separated list of archivedir"
+      "recipes": [
+
+      ],
+      "default": "0.1-1339500317",
+      "calculated": false,
+      "display_name": "Build Repo Version",
+      "description": "Build Repo Version"
     },
     "aptFTPArchive/architectures": {
-      "recipes": [
+      "type": "string",
+      "choice": [
 
       ],
-      "choice": [
+      "required": "recommended",
+      "recipes": [
 
       ],
       "default": "amd64 i386 i686",
       "calculated": false,
       "display_name": "APT FTP Archive Architectures",
-      "type": "string",
-      "required": "recommended",
       "description": "A space-separated list of Architectures"
+    },
+    "aptFTPArchive/archivedir": {
+      "type": "string",
+      "choice": [
+
+      ],
+      "required": "recommended",
+      "recipes": [
+
+      ],
+      "default": "/var/drepo/inmobi",
+      "calculated": false,
+      "display_name": "APT FTP Archive archivedir",
+      "description": "A space-separated list of archivedir"
+    },
+    "aptFTPArchive/codename": {
+      "type": "string",
+      "choice": [
+
+      ],
+      "required": "recommended",
+      "recipes": [
+
+      ],
+      "default": "prod",
+      "calculated": false,
+      "display_name": "APT FTP Archive codename",
+      "description": "Codename"
+    },
+    "aptFTPArchive/suite": {
+      "type": "string",
+      "choice": [
+
+      ],
+      "required": "recommended",
+      "recipes": [
+
+      ],
+      "default": "beta prod",
+      "calculated": false,
+      "display_name": "APT FTP Archive Suites",
+      "description": "A space-separated list of Suites"
     }
   },
-  "maintainer": "InMobi"
+  "maintainer_email": "hemant.burman@inmobi.com",
+  "name": "aptFTPArchive",
+  "providing": {
+  },
+  "recommendations": {
+  },
+  "license": "All rights reserved",
+  "maintainer": "InMobi",
+  "version": "0.0.1",
+  "description": "Installs/Configures aptFTPArchive",
+  "conflicting": {
+  },
+  "dependencies": {
+    "rightscale": ">= 0.0.0"
+  },
+  "long_description": "Description\n===========\n\nRequirements\n============\n\nAttributes\n==========\n\nUsage\n=====\n\n"
 }
