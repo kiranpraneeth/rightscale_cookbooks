@@ -51,3 +51,9 @@ attribute "aptFTPArchive/buildrepover",
   :default => "0.1-1339500317",
   :required => "recommended"
 
+attribute "aptFTPArchive/aptRootPath",
+  :display_name => "Apt Apache Root Path",
+  :description => "Apt Apache Root Path",
+  :type => "string",
+  :default => "/var/drepo",
+  :required => "recommended"
