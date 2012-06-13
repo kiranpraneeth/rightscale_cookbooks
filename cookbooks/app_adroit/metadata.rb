@@ -6,7 +6,6 @@ long_description IO.read(File.join(File.dirname(__FILE__), 'README.rdoc'))
 version          "0.0.1"
 
 depends "app"
-depends "rightscale"
 
 recipe  "app_adroit::default", "Installs the required adroit debians"
 
