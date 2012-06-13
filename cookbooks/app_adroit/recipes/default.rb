@@ -13,8 +13,10 @@ node[:app][:provider] = "app_adroit"
 # Preparing list of database adapter packages depending on platform and database adapter
 case node[:platform]
 when "ubuntu", "debian"
+  log "Entered Ubuntu platform case"
   case node[:app_adroit][:function]
   when "backend"
+    log "Entered backend type case"
     node[:app][:packages] = [
       "roi-feedback-package"
       #"java-gcj-compat-dev",
