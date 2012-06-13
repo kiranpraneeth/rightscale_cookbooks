@@ -8,7 +8,7 @@
 rightscale_marker :begin
 
 log "  Setting provider specific settings for tomcat"
-node[:app][:provider] = "app_adroit"
+node[:app][:provider] = "app"
 
 # Preparing list of database adapter packages depending on platform and database adapter
 case node[:platform]
@@ -36,6 +36,13 @@ else
   raise "Unrecognized distro #{node[:platform]}, exiting "
 end
 
+app "default" do
+  log "Entered app provider call"
+  persist true
+  provider node[:app][:provider]
+  packages node[:app][:packages]
+  action :install
+end
 # Setting app LWRP attribute
 #node[:app][:root] = "#{node[:repo][:default][:destination]}/#{node[:web_apache][:application_name]}"
 # tomcat shares the same doc root with the application destination
