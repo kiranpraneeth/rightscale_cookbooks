@@ -1,0 +1,46 @@
+{
+  "version": "0.0.1",
+  "dependencies": {
+    "app": ">= 0.0.0"
+  },
+  "platforms": {
+  },
+  "maintainer": "RightScale, Inc.",
+  "conflicting": {
+  },
+  "maintainer_email": "support@rightscale.com",
+  "attributes": {
+    "app_adroit/function": {
+      "display_name": "Type of Adroit Server",
+      "type": "string",
+      "calculated": false,
+      "choice": [
+        "frontend",
+        "backend",
+        "gboconsole"
+      ],
+      "recipes": [
+        "app_adroit::default"
+      ],
+      "required": "required",
+      "description": "Mention the type of adroit server ex: frontend or backend"
+    }
+  },
+  "replacing": {
+  },
+  "long_description": "",
+  "groupings": {
+  },
+  "license": "Copyright RightScale, Inc. All rights reserved.",
+  "recommendations": {
+  },
+  "recipes": {
+    "app_adroit::default": "Installs the required adroit debians"
+  },
+  "name": "app_adroit",
+  "providing": {
+  },
+  "suggestions": {
+  },
+  "description": "Installs the required adroit servers."
+}
