@@ -18,7 +18,8 @@ when "ubuntu", "debian"
   when "backend"
     log "Entered backend type case"
     node[:app][:packages] = [
-      "roi-feedback-package"
+      " roi-tracker-cron-package"
+      #"roi-feedback-package"
       #"java-gcj-compat-dev",
     ]
   when "frontend"
