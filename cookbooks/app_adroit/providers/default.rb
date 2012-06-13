@@ -41,3 +41,4 @@ action :install do
     log "installing #{p}"
     package p
 end
+end
