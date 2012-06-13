@@ -8,7 +8,7 @@ rightscale_marker :begin
 log "  Setting provider specific settings for tomcat"
 node[:app][:provider] = "app"
 
-# Preparing list of database adapter packages depending on platform and database adapter
+# Preparing list of packages based on functionality
 case node[:platform]
 when "ubuntu", "debian"
   log "Entered Ubuntu platform case"
