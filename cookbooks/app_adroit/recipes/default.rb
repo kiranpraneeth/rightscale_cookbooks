@@ -37,7 +37,6 @@ else
 end
 
 app "default" do
-  log "Entered app provider call"
   persist true
   provider node[:app][:provider]
   packages node[:app][:packages]
