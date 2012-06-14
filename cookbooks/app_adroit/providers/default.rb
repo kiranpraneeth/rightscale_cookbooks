@@ -6,7 +6,6 @@
 # if applicable, other agreements such as a RightScale Master Subscription Agreement.
 
 # Stop services
-log "Entered app_adroit provider"
 action :stop do
   log "  Running stop sequence"
   service "tomcat6" do
