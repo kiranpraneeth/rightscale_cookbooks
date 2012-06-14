@@ -16,9 +16,9 @@ when "ubuntu", "debian"
   when "backend"
     log "Entered backend type case"
     node[:app][:packages] = [
-    "roi-tracker-cron-package",
-    "roi-feedback-package",
-    "inmobi-ivory-client",
+    "roi-tracker-cron-package=1339489594",
+    "roi-feedback-package=1339489606",
+    "inmobi-ivory-client=0.1.4",
     "libapparmor-perl",
     "libbit-vector-perl",
     "libcarp-clan-perl",
@@ -171,8 +171,8 @@ else
   raise "Unrecognized distro #{node[:platform]}, exiting "
 end
 
-#Using app cookbook and installing the required packages using APT
-app "default" do
+#Using app-adroit cookbook and installing the required packages using APT
+app_adroit "default" do
   persist true
   provider node[:app][:provider]
   packages node[:app][:packages]
