@@ -26,19 +26,19 @@ action :restart do
 end
 
 action :install do
-  log "Entered app_adroit install action"
+  log "  Entered app_adroit install action"
   packages = new_resource.packages
   log "  Packages which will be installed: #{packages}"
   v = ""
   packages .each do |p|
     if ( p =~ /(.*)=(.*)/ )
-       log "Version defined in #{p} so spliting"
+       log "   Version defined in #{p} so spliting"
        p = $1
        v = $2
        package p do
           version "#{v}"
-          log "Package is #{p} and version #{v}"
-          log "installing #{p} #{v}"
+          log "   Package is #{p} and version #{v}"
+          log "   installing #{p} #{v}"
        end
     else
        package p
