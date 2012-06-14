@@ -25,17 +25,25 @@ action :restart do
   raise 'Using "default" application provider.  Action is not implemented'
 end
 
-
 action :install do
-  # Install user-specified Packages and Modules
+  log "Entered app_adroit install action"
   packages = new_resource.packages
-  log "Packages which will be installed #{packages}"
-
-  packages.each do |p|
-    package p
-  end
+  log "  Packages which will be installed: #{packages}"
+  v = ""
+  packages .each do |p|
+    if ( p =~ /(.*)=(.*)/ )
+       log "Version defined in #{p} so spliting"
+       p = $1
+       v = $2
+       package p do
+          version "#{v}"
+          log "Package is #{p} and version #{v}"
+          log "installing #{p} #{v}"
+       end
+    else
+       package p
+    end
 end
-
 
 # Setup application vhost
 action :setup_vhost do
