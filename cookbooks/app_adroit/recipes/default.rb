@@ -19,7 +19,6 @@ when "ubuntu", "debian"
     "roi-tracker-cron-package=1337234401",
     "roi-feedback-package=1337186171",
     "inmobi-ivory-client=0.1.4"
-    "inmobi-apptracker-backfill-cron=1.0-1320909955",
     "libapparmor-perl",
     "libbit-vector-perl",
     "libcarp-clan-perl",
