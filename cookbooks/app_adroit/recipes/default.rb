@@ -6,7 +6,7 @@
 rightscale_marker :begin
 
 log "  Setting provider specific settings for tomcat"
-node[:app][:provider] = "app"
+node[:app][:provider] = "app-adroit"
 
 # Preparing list of packages based on functionality
 case node[:platform]
