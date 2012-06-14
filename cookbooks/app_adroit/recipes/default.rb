@@ -16,18 +16,10 @@ when "ubuntu", "debian"
   when "backend"
     log "Entered backend type case"
     node[:app][:packages] = [
-    "roi-tracker-cron-package",
-    "roi-feedback-package",
-    "inmobi-ivory-client"
-    "inmobi-adroit-collectdconf",
-    "inmobi-apptracker-backfill-cron",
-    "inmobi-daemontools",
-    "inmobi-dnscache",
-    "inmobi-loop",
-    "inmobi-mcollective-plugins",
-    "inmobi-ntpd",
-    "inmobi-snmpd",
-    "inmobi-tinydns",
+    "roi-tracker-cron-package=1337234401",
+    "roi-feedback-package=1337186171",
+    "inmobi-ivory-client=0.1.4"
+    "inmobi-apptracker-backfill-cron=1.0-1320909955",
     "libapparmor-perl",
     "libbit-vector-perl",
     "libcarp-clan-perl",
@@ -85,7 +77,6 @@ when "ubuntu", "debian"
     "perl-base",
     "perl-doc",
     "perl-modules",
-    "puppet-metadata-plugin"
     ]
   when "frontend"
     log "Entered frontend type case"
