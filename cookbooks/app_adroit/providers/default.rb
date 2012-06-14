@@ -37,8 +37,14 @@ end
 action :install do
   packages = new_resource.packages
   log "  Packages which will be installed: #{packages}"
+  v = ""
   packages .each do |p|
-    log "installing #{p}"
+    if ( p =~ /(.*)=(.*)/ )
+       p = $1
+       v = $2
+       version "#{v}"
+    end
+    log "installing #{p} #{v}"
     package p
 end
 end
