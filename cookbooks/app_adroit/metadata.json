@@ -1,46 +1,45 @@
 {
+  "groupings": {
+  },
+  "providing": {
+  },
+  "license": "Copyright RightScale, Inc. All rights reserved.",
   "version": "0.0.1",
-  "dependencies": {
-    "app": ">= 0.0.0"
+  "replacing": {
   },
-  "platforms": {
+  "recommendations": {
   },
-  "maintainer": "RightScale, Inc.",
-  "conflicting": {
+  "suggestions": {
   },
-  "maintainer_email": "support@rightscale.com",
+  "name": "app_adroit",
+  "recipes": {
+    "app_adroit::default": "Installs the required adroit debians"
+  },
   "attributes": {
     "app_adroit/function": {
-      "display_name": "Type of Adroit Server",
+      "required": "required",
       "type": "string",
+      "display_name": "Type of Adroit Server",
+      "recipes": [
+        "app_adroit::default"
+      ],
       "calculated": false,
       "choice": [
         "frontend",
         "backend",
         "gboconsole"
       ],
-      "recipes": [
-        "app_adroit::default"
-      ],
-      "required": "required",
       "description": "Mention the type of adroit server ex: frontend or backend"
     }
   },
-  "replacing": {
+  "dependencies": {
   },
-  "long_description": "",
-  "groupings": {
+  "maintainer_email": "support@rightscale.com",
+  "maintainer": "RightScale, Inc.",
+  "conflicting": {
   },
-  "license": "Copyright RightScale, Inc. All rights reserved.",
-  "recommendations": {
+  "platforms": {
   },
-  "recipes": {
-    "app_adroit::default": "Installs the required adroit debians"
-  },
-  "name": "app_adroit",
-  "providing": {
-  },
-  "suggestions": {
-  },
-  "description": "Installs the required adroit servers."
+  "description": "Installs the required adroit servers.",
+  "long_description": ""
 }
