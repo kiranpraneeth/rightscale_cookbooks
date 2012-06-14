@@ -40,9 +40,11 @@ action :install do
   v = ""
   packages .each do |p|
     if ( p =~ /(.*)=(.*)/ )
+       log "Version defined in #{p} so spliting"
        p = $1
        v = $2
        version "#{v}"
+       log "Package is #{p} and version #{v}"
     end
     log "installing #{p} #{v}"
     package p
