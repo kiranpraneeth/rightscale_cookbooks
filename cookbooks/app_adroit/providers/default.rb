@@ -6,6 +6,7 @@
 # if applicable, other agreements such as a RightScale Master Subscription Agreement.
 
 # Stop services
+log "Entered app_adroit provider"
 action :stop do
   log "  Running stop sequence"
   service "tomcat6" do
@@ -35,6 +36,7 @@ end
 
 #Installing specified packages
 action :install do
+  log "Entered app_adroit install action"
   packages = new_resource.packages
   log "  Packages which will be installed: #{packages}"
   v = ""
