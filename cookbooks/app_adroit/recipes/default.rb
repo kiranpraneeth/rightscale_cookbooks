@@ -16,8 +16,8 @@ when "ubuntu", "debian"
   when "backend"
     log "Entered backend type case"
     node[:app][:packages] = [
-    "roi-tracker-cron-package=1337234401",
-    "roi-feedback-package=1337186171",
+    "roi-tracker-cron-package=1339489594",
+    "roi-feedback-package=1339489606",
     "inmobi-ivory-client=0.1.4",
     "libapparmor-perl",
     "libbit-vector-perl",
