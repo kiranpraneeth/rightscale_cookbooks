@@ -5,8 +5,6 @@ description      "Installs the required adroit servers."
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.rdoc'))
 version          "0.0.1"
 
-depends "app"
-
 recipe  "app_adroit::default", "Installs the required adroit debians"
 
 attribute "app_adroit/function",
