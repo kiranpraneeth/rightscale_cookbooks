@@ -44,10 +44,13 @@ action :install do
        log "Version defined in #{p} so spliting"
        p = $1
        v = $2
-       version "#{v}"
-       log "Package is #{p} and version #{v}"
+       package p do
+          version "#{v}"
+          log "Package is #{p} and version #{v}"
+          log "installing #{p} #{v}"
+       end
+    else 
+       package p
     end
-    log "installing #{p} #{v}"
-    package p
 end
 end
