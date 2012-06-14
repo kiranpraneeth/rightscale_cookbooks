@@ -6,7 +6,7 @@
 rightscale_marker :begin
 
 log "  Setting provider specific settings for tomcat"
-node[:app][:provider] = "app-adroit"
+node[:app_adroit][:provider] = "app_adroit"
 
 # Preparing list of packages based on functionality
 case node[:platform]
@@ -15,7 +15,7 @@ when "ubuntu", "debian"
   case node[:app_adroit][:function]
   when "backend"
     log "Entered backend type case"
-    node[:app][:packages] = [
+    node[:app_adroit][:packages] = [
     "roi-tracker-cron-package=1339489594",
     "roi-feedback-package=1339489606",
     "inmobi-ivory-client=0.1.4",
@@ -79,7 +79,7 @@ when "ubuntu", "debian"
     ]
   when "frontend"
     log "Entered frontend type case"
-    node[:app][:packages] = [
+    node[:app_adroit][:packages] = [
     "com.mkhoj.datalogger-mkhoj-data_logger-",
     "com.mkhoj.util-mkhoj-msisdn-lib",
     "download-tracker.phoenix.worker-initwor",
@@ -160,7 +160,7 @@ when "ubuntu", "debian"
     ]
   when "gboconsole"
     log "Entered frontend type case"
-    node[:app][:packages] = [
+    node[:app_adroit][:packages] = [
       "adroit-console",
       "gbo-script"
     ]
@@ -174,8 +174,8 @@ end
 #Using app-adroit cookbook and installing the required packages using APT
 app_adroit "default" do
   persist true
-  provider node[:app][:provider]
-  packages node[:app][:packages]
+  provider node[:app_adroit][:provider]
+  packages node[:app_adroit][:packages]
   action :install
 end
 
