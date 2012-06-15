@@ -173,7 +173,7 @@ end
 #Using app-adroit cookbook and installing the required packages using APT
 app_adroit "install_packages" do
   persist true
-  packages node[:app][:packages]
+  packages node[:app_adroit][:packages]
   action :install
 end
 
