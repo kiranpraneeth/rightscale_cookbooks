@@ -35,7 +35,7 @@ end
 
 #Installing specified packages
 action :install do
-  log "Entered app_adroit install action"
+  log "Entered app_adroit my  install action"
   packages = new_resource.packages
   log "  Packages which will be installed: #{packages}"
   v = ""
@@ -50,6 +50,7 @@ action :install do
           log "installing #{p} #{v}"
        end
     else 
+       log "Package is #{p} and version is not defined"
        package p
     end
 end
