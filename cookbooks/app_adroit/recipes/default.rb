@@ -160,8 +160,29 @@ when "ubuntu", "debian"
   when "gboconsole"
     log "Entered frontend type case"
     node[:app_adroit][:packages] = [
-      "adroit-console",
-      "gbo-script"
+      "adroit-console=1338279810",
+      "gbo-script=1.0-1333353552",
+      "django=1.2-1284962466",
+      "adroitnginx-gboconsole-script-conf=0.1.0-1339760848",
+      "libpython2.6",
+      "python",
+      "python-apt",
+      "python-central",
+      "python-cheetah",
+      "python-crypto",
+      "python-egenix-mxdatetime",
+      "python-egenix-mxtools",
+      "python-flup",
+      "python-gdbm",
+      "python-gnupginterface",
+      "python-minimal",
+      "python-newt",
+      "python-psycopg2",
+      "python-support",
+      "python-webpy",
+      "python2.6",
+      "python2.6-minimal",
+
     ]
   else
     raise "Unrecognized function #{node[:app_adroit][:function]}, exiting "
