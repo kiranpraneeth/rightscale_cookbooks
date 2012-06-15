@@ -39,7 +39,7 @@ action :install do
   packages = new_resource.packages
   log "  Packages which will be installed: #{packages}"
   v = ""
-  packages .each do |p|
+  packages.each do |p|
     if ( p =~ /(.*)=(.*)/ )
        log "Version defined in #{p} so spliting"
        p = $1
