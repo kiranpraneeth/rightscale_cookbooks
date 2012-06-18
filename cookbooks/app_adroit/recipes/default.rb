@@ -160,7 +160,7 @@ when "ubuntu", "debian"
   when "gboconsole"
     log "Entered frontend type case"
     node[:app_adroit][:packages] = [
-      "adroit-console=1338279810",
+      "adroit-console=1.0-1338279810",
       "gbo-script=1.0-1333353552",
       "django=1.2-1284962466",
       "adroitnginx-gboconsole-script-conf=0.1.0-1339760848",
