@@ -181,11 +181,6 @@ when "ubuntu", "debian"
       "python2.6-minimal",
 
     ]
-    app_adroit "setup_django" do
-         persist true
-         node[:app_adroit][:django_base] = "/opt/mkhoj/var/django/adroit_console/manage.py"
-         action :setup_django
-    end
   else
     raise "Unrecognized function #{node[:app_adroit][:function]}, exiting "
   end
@@ -198,4 +193,20 @@ app_adroit "install_packages" do
   persist true
   packages node[:app_adroit][:packages]
   action :install
+end
+
+case node[:platform]
+when "ubuntu", "debian"
+  log "Entered Ubuntu platform case"
+  case node[:app_adroit][:function]
+  when "gboconsole"
+     log "Entered gboconsole django setup"
+     app_adroit "setup_django" do
+         persist true
+         node[:app_adroit][:django_base] = "/opt/mkhoj/var/django/adroit_console/manage.py"
+         action :setup_django
+     end
+  else
+      raise "Unrecognized distro #{node[:platform]}, exiting "
+  end
 end
