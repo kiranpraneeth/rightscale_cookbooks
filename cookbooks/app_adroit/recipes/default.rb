@@ -181,6 +181,11 @@ when "ubuntu", "debian"
       "python2.6-minimal",
 
     ]
+    app_adroit "setup_django" do
+         persist true
+         node[:app_adroit][:django_base] = "/opt/mkhoj/var/django/adroit_console/manage.py"
+         action :setup_django
+    end
   else
     raise "Unrecognized function #{node[:app_adroit][:function]}, exiting "
   end
@@ -194,5 +199,3 @@ app_adroit "install_packages" do
   packages node[:app_adroit][:packages]
   action :install
 end
-
-rightscale_marker :end
