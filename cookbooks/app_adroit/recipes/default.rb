@@ -155,7 +155,7 @@ when "ubuntu", "debian"
     "perl-modules",
     ]
   when "gboconsole"
-    log "Entered frontend type case"
+    log "Entered gbovonsole type case"
     node[:app_adroit][:packages] = [
       "adroit-console=1.0-1338279810",
       "gbo-script=1.0-1333353552",
