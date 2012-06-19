@@ -8,7 +8,7 @@
 # Stop services
 action :stop do
   log "  Running stop sequence"
-  service "tomcat6" do
+  service "django" do
     action :stop
     persist false
   end
@@ -17,7 +17,7 @@ end
 # Start services
 action :start do
   log "  Running start sequence"
-  service "tomcat6" do
+  service "django" do
     action :start
     persist false
   end
@@ -55,4 +55,21 @@ action :install do
        package p
     end
 end
+
+# Setup Django and restart 
+# Setup tomcat configuration files
+action :setup_django do
+
+  log " Creating /etc/init.d/django with django base #{node[:app][:django_base]}"
+  template "/etc/init.d/django" do
+    action :create
+    source "django_init.erb"
+    group "root"
+    owner "root"
+    mode "0755"
+    variables(
+      :django_base => node[:app_adroit][:django_base]
+    )
+    notifies :restart , "service[django]"
+  end
 end
