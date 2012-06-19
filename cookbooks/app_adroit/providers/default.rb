@@ -61,7 +61,6 @@ end
 action :setup_django do
   log " Creating /etc/init.d/django with django base #{node[:app_adroit][:django_base]}"
   template "/etc/init.d/django" do
-    action :create
     source "django_init.erb"
     group "root"
     owner "root"
