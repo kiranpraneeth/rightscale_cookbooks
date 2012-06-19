@@ -18,6 +18,10 @@ actions :stop
 # Runs application server restart sequence
 actions :restart
 
+# Setup Django
+actions :setup_django
+  attribute :django_base, :kind_of => String
+
 # Updates application source files from the remote repository
 # Action designed to setup APP LWRP with common parameters required for source code update/download
 actions :code_update
