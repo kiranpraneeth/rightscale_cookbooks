@@ -21,7 +21,6 @@ action :start do
     action :start
     persist false
   end
-
 end
 
 # Restart services
@@ -54,12 +53,12 @@ action :install do
        log "Package is #{p} and version is not defined"
        package p
     end
+  end
 end
 
 # Setup Django and restart 
 # Setup tomcat configuration files
 action :setup_django do
-
   log " Creating /etc/init.d/django with django base #{node[:app][:django_base]}"
   template "/etc/init.d/django" do
     action :create
