@@ -68,9 +68,8 @@ action :setup_django do
     variables(
       :django_base => node[:app_adroit][:django_base]
     )
-#    notifies :restart , "service[django]"
-    service "django" do
-      action :start
-    end
+  end
+  service "django" do
+    action :start
   end
 end
