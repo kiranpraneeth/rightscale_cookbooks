@@ -76,7 +76,6 @@ when "ubuntu", "debian"
     "perl-doc",
     "perl-modules",
     ]
-    
   when "frontend"
     log "Entered frontend type case"
     node[:app_adroit][:packages] = [
@@ -155,6 +154,9 @@ when "ubuntu", "debian"
     "perl-doc",
     "perl-modules",
     ]
+  else
+    raise "Unrecognized function #{node[:app_adroit][:function]}, exiting "
+  end
   when "gboconsole"
     log "Entered gbovonsole type case"
     node[:app_adroit][:packages] = [
