@@ -51,7 +51,9 @@ action :install do
        end
     else 
        log "Package is #{p} and version is not defined"
-       package p
+       package p do
+          options "--force-yes"
+       end
     end
   end
 end
