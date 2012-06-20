@@ -9,7 +9,6 @@ log "  Setting provider specific settings for tomcat"
 
 # Preparing list of packages based on functionality
 case node[:platform]
-log "Platform is #{node[:platform]}"
 when "ubuntu", "debian"
   log "Entered Ubuntu platform case"
   case node[:app_adroit][:function]
