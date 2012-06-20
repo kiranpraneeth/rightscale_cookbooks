@@ -205,7 +205,5 @@ when "ubuntu", "debian"
          node[:app_adroit][:django_base] = "/opt/mkhoj/var/django/adroit_console/manage.py"
          action :setup_django
      end
-  else
-      raise "Unrecognized distro #{node[:platform]}, exiting "
   end
 end
