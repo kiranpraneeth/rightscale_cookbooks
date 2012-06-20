@@ -15,8 +15,8 @@ when "ubuntu", "debian"
   when "backend"
     log "Entered backend type case"
     node[:app_adroit][:packages] = [
-    "roi-tracker-cron-package=1339489594",
-    "roi-feedback-package=1339489606",
+    "roi-tracker-cron-package=1340181767",
+    "roi-feedback-package=1340181994",
     "inmobi-ivory-client",
     "libapparmor-perl",
     "libbit-vector-perl",
@@ -76,6 +76,7 @@ when "ubuntu", "debian"
     "perl-doc",
     "perl-modules",
     ]
+    
   when "frontend"
     log "Entered frontend type case"
     node[:app_adroit][:packages] = [
@@ -157,7 +158,7 @@ when "ubuntu", "debian"
   when "gboconsole"
     log "Entered gbovonsole type case"
     node[:app_adroit][:packages] = [
-      "adroit-console=1.0-1338279810",
+      "adroit-console=1.0-1340184008",
       "gbo-script=1.0-1333353552",
       "django=1.2-1284962466",
       "adroitnginx-gboconsole-script-conf=0.1.0-1339760848",
@@ -179,7 +180,6 @@ when "ubuntu", "debian"
       "python-webpy",
       "python2.6",
       "python2.6-minimal",
-
     ]
   else
     raise "Unrecognized function #{node[:app_adroit][:function]}, exiting "
