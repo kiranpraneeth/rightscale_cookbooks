@@ -154,9 +154,6 @@ when "ubuntu", "debian"
     "perl-doc",
     "perl-modules",
     ]
-  else
-    raise "Unrecognized function #{node[:app_adroit][:function]}, exiting "
-  end
   when "gboconsole"
     log "Entered gbovonsole type case"
     node[:app_adroit][:packages] = [
