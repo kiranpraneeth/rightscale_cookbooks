@@ -75,14 +75,16 @@ when "ubuntu", "debian"
     "perl-base",
     "perl-doc",
     "perl-modules",
+    "postgresql-client-8.4",
+    "postgresql-client-common",
     ]
   when "frontend"
     log "Entered frontend type case"
     node[:app_adroit][:packages] = [
-    #"com.mkhoj.datalogger-mkhoj-data_logger-lib",
+    "com.mkhoj.datalogger-mkhoj-data_logger-lib",
     "download-tracker.phoenix.worker-initworker",
     "download-tracker.phoenix.worker-responsewriter",
-    "mkhoj-download-tracker-cfg",
+    "inmobi-apptracker-phoenix-conf",
     "phoenix.core-phoenix",
     "phoenix.data-data",
     "phoenix.entity-ccid",
