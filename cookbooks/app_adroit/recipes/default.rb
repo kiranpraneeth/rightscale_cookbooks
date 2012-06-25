@@ -156,6 +156,9 @@ when "ubuntu", "debian"
     "perl-doc",
     "perl-modules",
     ]
+    service "tomcat6" do
+       action :restart
+    end
   when "gboconsole"
     log "Entered gbovonsole type case"
     node[:app_adroit][:packages] = [
