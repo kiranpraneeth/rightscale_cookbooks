@@ -181,6 +181,8 @@ when "ubuntu", "debian"
       "python-webpy",
       "python2.6",
       "python2.6-minimal",
+      "postgresql-client-8.4",
+      "postgresql-client-common",
     ]
   else
     raise "Unrecognized function #{node[:app_adroit][:function]}, exiting "
